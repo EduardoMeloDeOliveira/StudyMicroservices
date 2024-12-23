@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: user-ms-container-db
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 1033
+      POSTGRES_DB: user
+    ports:
+      - "5432:5432"
+
+
+  email-ms-container-db:
+    image: postgres:latest
+    container_name: email-ms-container-db
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 1033
+      POSTGRES_DB: email
+    ports:
+      - "5433:5432"
